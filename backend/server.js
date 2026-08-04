@@ -707,7 +707,7 @@ app.listen(5000,()=>{
 
 
     console.log(
-        "Backend running on http://localhost:5000"
+        "Backend running on https://smarttourist-mf35.onrender.com"
     );
 
 

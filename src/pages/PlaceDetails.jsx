@@ -31,7 +31,7 @@ const city = searchParams.get("city") || "";
     try {
 
       const response = await fetch(
-        `http://localhost:5000/place/${id}`
+        `https://smarttourist-mf35.onrender.com/place/${id}`
       );
 
       const data = await response.json();

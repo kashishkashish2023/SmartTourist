@@ -15,7 +15,7 @@ function Signup() {
 
       console.log(decoded);
 
-      const response = await fetch("http://localhost:5000/api/auth/google", {
+      const response = await fetch("https://smarttourist-mf35.onrender.com/api/auth/google", {
 
         method: "POST",
 
@@ -163,7 +163,7 @@ function Signup() {
 
     try {
 
-      const response = await fetch("http://localhost:5000/api/auth/signup", {
+      const response = await fetch("https://smarttourist-mf35.onrender.com/api/auth/signup", {
 
         method: "POST",
 
@@ -211,7 +211,7 @@ function Signup() {
 
       console.log(decoded);
 
-      const response = await fetch("http://localhost:5000/api/auth/google", {
+      const response = await fetch("https://smarttourist-mf35.onrender.com/api/auth/google", {
 
         method: "POST",
 
@@ -382,7 +382,7 @@ try{
 
 
 const response = await fetch(
-"http://localhost:5000/api/auth/signup",
+"https://smarttourist-mf35.onrender.com/api/auth/signup",
 {
 
 method:"POST",
@@ -445,7 +445,7 @@ try{
 
 
 const response = await fetch(
-"http://localhost:5000/api/auth/google",
+"https://smarttourist-mf35.onrender.com/api/auth/google",
 {
 
 method:"POST",
@@ -718,7 +718,7 @@ try{
 
 
 const response = await fetch(
-"http://localhost:5000/api/auth/signup",
+"https://smarttourist-mf35.onrender.com/api/auth/signup",
 {
 
 method:"POST",
@@ -790,7 +790,7 @@ credentialResponse.credential
 
 
 const response = await fetch(
-"http://localhost:5000/api/auth/google",
+"https://smarttourist-mf35.onrender.com/api/auth/google",
 {
 
 method:"POST",

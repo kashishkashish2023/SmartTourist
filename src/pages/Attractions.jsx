@@ -57,7 +57,7 @@ function Attractions() {
 
 
       const response = await fetch(
-        `http://localhost:5000/attractions?city=${encodeURIComponent(cityName)}`
+        `https://smarttourist-mf35.onrender.com/attractions?city=${encodeURIComponent(cityName)}`
       );
 
 

@@ -96,7 +96,7 @@ const cityFromUrl = searchParams.get("city") || "";
       setLoading(true);
 
       const response = await fetch(
-        `http://localhost:5000/hotels?city=${search}`
+        `https://smarttourist-mf35.onrender.com/hotels?city=${search}`
       );
 
       const data = await response.json();
@@ -125,7 +125,7 @@ const cityFromUrl = searchParams.get("city") || "";
     setSearch(cityFromUrl);
 
     setTimeout(() => {
-      fetch(`http://localhost:5000/hotels?city=${encodeURIComponent(cityFromUrl)}`)
+      fetch(`https://smarttourist-mf35.onrender.com/hotels?city=${encodeURIComponent(cityFromUrl)}`)
         .then((res) => res.json())
         .then((data) => {
           setHotels(data);
@@ -211,7 +211,7 @@ const cityFromUrl = searchParams.get("city") || "";
 try{
 
     const response = await fetch(
-        "http://localhost:5000/api/bookings",
+        "https://smarttourist-mf35.onrender.com/api/bookings",
         {
             method:"POST",
 
@@ -250,7 +250,7 @@ catch(error){
 
     try {
 
-      const response = await fetch("http://localhost:5000/create-order", {
+      const response = await fetch("https://smarttourist-mf35.onrender.com/create-order", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -287,7 +287,7 @@ catch(error){
     console.log("PAYMENT SUCCESS:", response);
 
 
-    await fetch("http://localhost:5000/api/bookings/payment",{
+    await fetch("https://smarttourist-mf35.onrender.com/api/bookings/payment",{
 
         method:"PUT",
 

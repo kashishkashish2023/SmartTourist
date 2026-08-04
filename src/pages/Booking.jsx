@@ -22,7 +22,7 @@ function Booking() {
         try {
 
             // Save booking
-            await axios.post("http://localhost:5000/api/booking", {
+            await axios.post("https://smarttourist-mf35.onrender.com/api/booking", {
 
                 hotelName: hotel.name,
                 customerName,
@@ -36,7 +36,7 @@ function Booking() {
 
             // Create Razorpay Order
             const order = await axios.post(
-                "http://localhost:5000/api/payment/create-order",
+                "https://smarttourist-mf35.onrender.com/api/payment/create-order",
                 {
                     amount
                 }

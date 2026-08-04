@@ -114,7 +114,7 @@ function Login() {
 
     try {
 
-      const response = await fetch("http://localhost:5000/api/auth/login", {
+      const response = await fetch("https://smarttourist-mf35.onrender.com/api/auth/login", {
 
         method: "POST",
 
@@ -161,7 +161,7 @@ function Login() {
 
       const decoded = jwtDecode(credentialResponse.credential);
 
-      const response = await fetch("http://localhost:5000/api/auth/google", {
+      const response = await fetch("https://smarttourist-mf35.onrender.com/api/auth/google", {
 
         method: "POST",
 
@@ -313,7 +313,7 @@ function Login() {
 
 
       const response = await fetch(
-        "http://localhost:5000/api/auth/login",
+        "https://smarttourist-mf35.onrender.com/api/auth/login",
         {
 
           method:"POST",
@@ -384,7 +384,7 @@ function Login() {
 
 
       const response = await fetch(
-        "http://localhost:5000/api/auth/google",
+        "https://smarttourist-mf35.onrender.com/api/auth/google",
         {
 
           method:"POST",
@@ -602,7 +602,8 @@ function Login() {
 
   );
 
-}
+
+  }
 
 
 export default Login;*/
@@ -632,7 +633,7 @@ function Login() {
 
 
       const response = await fetch(
-        "http://localhost:5000/api/auth/login",
+        "https://smarttourist-mf35.onrender.com/api/auth/login",
         {
 
           method:"POST",
@@ -701,7 +702,7 @@ function Login() {
 
 
       const response = await fetch(
-        "http://localhost:5000/api/auth/google",
+        "https://smarttourist-mf35.onrender.com/api/auth/google",
         {
 
           method:"POST",
