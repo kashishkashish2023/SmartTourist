@@ -82,7 +82,7 @@ function ChatBot() {
         setTyping(true);
         console.log("Sending:", text);
         try {
-            const response = await fetch("http://localhost:5000/api/chat", {
+            const response = await fetch("https://smarttourist-mf35.onrender.com/api/chat", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
