@@ -35,7 +35,7 @@ import "./App.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <GoogleOAuthProvider clientId='83028150162-159pne9dv9jn2k48en5k0hko8bkk3uia.apps.googleusercontent.com'>
+    <GoogleOAuthProvider clientId='1057772146168-tdrqm7sg1q7hl1afk65bu349588647st.apps.googleusercontent.com'>
     
       <BrowserRouter>
         <App />
