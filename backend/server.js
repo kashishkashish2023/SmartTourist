@@ -521,7 +521,7 @@ app.post("/api/contact", async(req,res)=>{
         await transporter.sendMail({
 
 
-            from:`"Smart Tourism Planner" <${process.env.EMAIL_USER}>`,
+            from:`"Smart Tourism Planner" <${process.env.SMTP_USER}>`,
 
 
             replyTo:email,
