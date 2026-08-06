@@ -483,25 +483,14 @@ app.get("/place/:id", async(req,res)=>{
 
     catch(error){
 
+    console.log("MAIL ERROR:", error);
 
-        console.log(
+    res.status(500).json({
+        message: error.message,
+        code: error.code
+    });
 
-            "PLACE DETAILS ERROR:",
-
-            error.response?.data || error.message
-
-        );
-
-
-
-        res.status(500).json({
-
-            message:"Failed to fetch place details"
-
-        });
-
-
-    }
+}
 
 
 });
