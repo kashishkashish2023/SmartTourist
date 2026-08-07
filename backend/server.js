@@ -525,7 +525,7 @@ console.log("SMTP_PASS exists:", !!process.env.SMTP_PASS);
         await transporter.sendMail({
 
 
-            from:`"Smart Tourism Planner" <${process.env.SMTP_USER}>`,
+            from:`"Smart Tourism Planner" <kashishkashish2305@gmail.com>`,
 
 
             replyTo:email,
