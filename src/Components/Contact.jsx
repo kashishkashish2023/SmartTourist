@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";//
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 function Contact() {
-  const navigate = useNavigate();//
+  const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
     name: "",
@@ -22,8 +22,8 @@ function Contact() {
  const sendMessage = async (e) => {
   e.preventDefault();
 
-  console.log("Button Clicked");
-  alert("Button Clicked");
+  //console.log("Button Clicked");
+  //alert("Button Clicked");
 
   try {
     const res = await axios.post(
@@ -34,7 +34,7 @@ function Contact() {
     alert("Message sent successfully!");
 
 setTimeout(() => {
-  navigate("/");
+  navigate("/home");
 }, 1500);
   } catch (err) {
     console.log(err);
