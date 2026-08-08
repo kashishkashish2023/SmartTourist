@@ -496,7 +496,7 @@ app.get("/place/:id", async(req,res)=>{
 });
 
 // ================= EMAIL CONTACT =================
-
+/*
 
 const transporter = nodemailer.createTransport({
   host: "smtp-relay.brevo.com",
@@ -592,9 +592,72 @@ console.log("SMTP_PASS exists:", !!process.env.SMTP_PASS);
 
 });
 
+*/
 
+// ================= EMAIL CONTACT =================
 
+app.post("/api/contact", async (req, res) => {
+  try {
+    const { name, email, subject, message } = req.body;
 
+    const response = await axios.post(
+      "https://api.brevo.com/v3/smtp/email",
+      {
+        sender: {
+          name: "Smart Tourism Planner",
+          email: "kashishkashish2305@gmail.com",
+        },
+
+        replyTo: {
+          email: email,
+        },
+
+        to: [
+          {
+            email: "prachikumar7303@gmail.com",
+          },
+          {
+            email: "kashishkashish2305@gmail.com",
+          },
+        ],
+
+        subject: `Contact Form: ${subject}`,
+
+        htmlContent: `
+          <h2>New Contact Query</h2>
+
+          <p><b>Name:</b> ${name}</p>
+          <p><b>Email:</b> ${email}</p>
+          <p><b>Subject:</b> ${subject}</p>
+          <p><b>Message:</b></p>
+          <p>${message}</p>
+        `,
+      },
+      {
+        headers: {
+          "api-key": process.env.BREVO_API_KEY,
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+      }
+    );
+
+    console.log("EMAIL SENT:", response.data);
+
+    res.json({
+      message: "Message sent successfully",
+    });
+  } catch (error) {
+    console.log(
+      "BREVO API ERROR:",
+      error.response?.data || error.message
+    );
+
+    res.status(500).json({
+      message: "Failed to send message",
+    });
+  }
+});
 
 // ================= GEMINI CHATBOT =================
 
