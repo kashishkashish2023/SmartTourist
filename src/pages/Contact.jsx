@@ -1,9 +1,11 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 
 function Contact() {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -27,7 +29,11 @@ function Contact() {
         formData
       );
 
-      alert("✅ Your message has been sent successfully!");
+    alert("✅ Your message has been sent successfully!");
+
+setTimeout(() => {
+  navigate("/home");
+}, 1500);
 
       setFormData({
         name: "",
