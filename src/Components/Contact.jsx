@@ -1,7 +1,10 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";//
 import axios from "axios";
 
 function Contact() {
+  const navigate = useNavigate();//
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -28,7 +31,11 @@ function Contact() {
   formData
 );
 
-    alert(res.data.message);
+    alert("Message sent successfully!");
+
+setTimeout(() => {
+  navigate("/");
+}, 1500);
   } catch (err) {
     console.log(err);
     alert("Failed");
