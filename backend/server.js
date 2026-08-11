@@ -692,7 +692,7 @@ Rules:
 - Answer only travel related questions.
 - Help with destinations, hotels, itinerary, budget, transport and travel tips.
 - Keep answers short and friendly.
-- Include 1-3 relevant emojis in every response, naturally matching the topic or mood.
+- Use relevant emojis naturally in your responses when appropriate. Do not overuse them.
 - If user asks unrelated questions, politely say you only help with travel.
 
 User:
