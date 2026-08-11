@@ -98,7 +98,7 @@ function ChatBot() {
                 ...prev,
                 {
                     sender: "bot",
-                    text: data.reply,
+                    text: "✨ " + data.reply,
                 },
             ]);
         } catch (error) {
